@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/icon.webp"
+    />
+
+    <title>Time tracking dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box profile-box">
+        <div class="content profile-content">
+          <img
+            src="./images/image-jeremy.png"
+            alt=""
+            width="60"
+            height="60"
+            class="profile-img"
+          />
+          <section class="profile-head">
+            <p>Report for</p>
+            <h1>Jeremy <br class="desktop-break">Robson</h1>
+          </section>
+        </div>
+
+        <div class="time-links">
+          <h4 onclick="daily()" id="dailyHead">Daily</h4>
+          <h4 onclick="weekly()" id="weeklyHead" class="select">Weekly</h4>
+          <h4 onclick="monthly()" id="monthlyHead">Monthly</h4>
+        </div>
+      </div>
+
+      <div class="box work-box">
+        <div class="content">
+          <div>
+            <h3>Work</h3>
+            <img src="./images/icon-ellipsis.svg" alt="" height="4" />
+          </div>
+          <div>
+            <h2><span id="work-main">32</span>hrs</h2>
+            <p>Last Week - <span id="work-sub">36</span>hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box play-box">
+        <div class="content">
+          <div>
+            <h3>Play</h3>
+            <img src="./images/icon-ellipsis.svg" alt="" height="4" />
+          </div>
+          <div>
+            <h2><span id="paly-main">10</span>hrs</h2>
+            <p>Last Week - <span id="play-sub">8</span>hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box study-box">
+        <div class="content">
+          <div>
+            <h3>Study</h3>
+            <img src="./images/icon-ellipsis.svg" alt="" height="4" />
+          </div>
+          <div>
+            <h2><span id="study-main">4</span>hrs</h2>
+            <p>Last Week - <span id="study-sub">7</span>hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box exercise-box">
+        <div class="content">
+          <div>
+            <h3>Exercise</h3>
+            <img src="./images/icon-ellipsis.svg" alt="" height="4" />
+          </div>
+          <div>
+            <h2><span id="exercise-main">4</span>hrs</h2>
+            <p>Last Week - <span id="exercise-sub">5</span>hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box social-box">
+        <div class="content">
+          <div>
+            <h3>Social</h3>
+            <img src="./images/icon-ellipsis.svg" alt="" height="4" />
+          </div>
+          <div>
+            <h2><span id="social-main">5</span>hrs</h2>
+            <p>Last Week - <span id="social-sub">10</span>hrs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box selfCare-box">
+        <div class="content">
+          <div>
+            <h3>Self Care</h3>
+            <img src="./images/icon-ellipsis.svg" alt="" height="4" />
+          </div>
+          <div>
+            <h2><span id="self-main">2</span>hrs</h2>
+            <p>Last Week - <span id="self-sub">2</span>hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+   
+
+
+   
+   
+   
+
+  
+  
+
+
+  
+  
+
+
+
+
+
+ 
+
+
+    <script src="./main.js"></script>
+  </body>
+</html>

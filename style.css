@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: hsl(246, 80%, 60%);
+    --bg-work: hsl(15, 100%, 70%);
+    --bg-play: hsl(195, 74%, 62%);
+    --bg-study: hsl(348, 100%, 68%);
+    --bg-exercise: hsl(145, 58%, 55%);
+    --bg-social: hsl(264, 64%, 52%);
+    --bg-selfCare: hsl(43, 84%, 65%);
+
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+
+    --fs-h2: 2.2rem;
+    --fs-p: 0.8rem;
+
+    --transition: 250ms ease-in-out;
+
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: var(--very-dark-blue);
+}
+
+.container {
+    max-width: 1100px;
+    width: calc(100% - 2rem);
+    margin-inline: auto;
+}
+
+.box {
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    border-radius: .8rem;
+}
+
+.work-box {
+    background:  url(./images/icon-work.svg) no-repeat 90% 0%, var(--bg-work);
+}
+
+.play-box {
+    background: url(./images/icon-play.svg) no-repeat 90% 0%, var(--bg-play);
+}
+
+.study-box {
+    background: url(./images/icon-study.svg) no-repeat 90% 0%, var(--bg-study);
+}
+
+.exercise-box {
+    background: url(./images/icon-exercise.svg) no-repeat 90% 0%, var(--bg-exercise);
+}
+
+.social-box {
+    background: url(./images/icon-social.svg) no-repeat 90% 0%, var(--bg-social);
+}
+
+.selfCare-box {
+    background: url(./images/icon-self-care.svg) no-repeat 90% 0%, var(--bg-selfCare);
+}
+
+.content {
+    margin-top: 30px;
+    padding: 1.5rem;
+    background: var(--dark-blue);
+    color: #fff;
+    border-radius: 0.8rem;
+}
+
+.content > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content:nth-child(1):hover {
+    cursor: pointer;
+    transition: background var(--transition);
+    background: #34397B;
+}
+
+.content img {
+    cursor: pointer;
+}
+
+.content > div > h2 {
+
+    font-weight: 300;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: var(--fs-h2);
+}
+
+.content > div > p {
+    display: inline-block;
+    font-weight: 300;
+    font-size: var(--fs-p);
+    color: var(--pale-blue);
+
+}
+
+.content > div > h3 {
+    font-size: var(--fs-p);
+    font-weight: 500;
+}
+
+
+
+.profile-box {
+    background: var(--dark-blue);
+    padding-top: 0;
+}
+
+.profile-content {
+    background: var(--blue);
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.profile-content:nth-child(1):hover {
+    background-color: var(--blue);
+}
+
+.profile-img {
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.profile-head {
+    margin-left: 20px;
+}
+
+.profile-head > p {
+    font-weight: 300;
+    display: block;
+}
+
+.profile-head > h1 {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.time-links {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    width: calc(100% - 4rem);
+    margin-inline: auto;
+}
+
+.time-links > h4 {
+    width: fit-content;
+    color: var(--desaturated-blue);
+    font-weight: 400;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: color var(--transition);
+}
+
+.time-links > h4:hover {
+    color: var(--pale-blue);
+}
+
+.desktop-break {
+    display: none;
+}
+
+
+@media (min-width: 900px) {
+    body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-gap: 1rem;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+
+    .content > div + div > h2  {
+        display: block;
+    }
+
+    .profile-box {
+        grid-row: span 2;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 2.8rem;
+    }
+
+    .profile-head {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .profile-head > h1 {
+        margin-top: 10px;
+        font-size: 2rem;
+    }
+
+    .desktop-break {
+        display: inline-block;
+    }
+
+    .time-links {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+
+    .time-links > h4 {
+        margin-bottom: .8rem;
+        font-size: 1rem;
+    }
+
+    .content > div + div {
+        display: block;
+    }
+
+    .content > div + div > p {
+        margin-top: 10px;
+    }
+}
+
+
+.select {
+    color: var(--pale-blue) !important;
+    transition: color var(--transition);
+}
